@@ -1,4 +1,4 @@
-# TutorCircle — Functional & Non-Functional Requirements
+# TutorCircle — Functional & Non-Functional Requirement
 
 **Project:** TutorCircle — Peer Tutoring with Group Sessions and Learning Follow-Up
 
