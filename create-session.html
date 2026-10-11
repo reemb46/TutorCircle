@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create a session – TutorCircle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">TutorCircle</div>
+      <div class="role">Tutor</div>
+      <nav>
+        <a href="#">My sessions</a>
+        <a href="create-session.html" class="active">Create session</a>
+        <a href="#">My profile</a>
+        <a href="#">Notifications</a>
+      </nav>
+      <div class="sidebar-foot">
+        <strong>Tutor name</strong><br>
+        <a href="#">Settings</a> · <a href="index.html">Log out</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h1>Create a session</h1>
+
+      <form class="card" style="max-width: 790px" data-next="session.html">
+        <label for="title" style="margin-top: 0">Title</label>
+        <input type="text" id="title" placeholder="e.g. UML Sequence Diagrams" required>
+
+        <div class="row">
+          <div>
+            <label for="subject">Subject</label>
+            <select id="subject"><option>SWEN 360</option></select>
+          </div>
+          <div>
+            <label for="topic">Topic</label>
+            <select id="topic"><option>UML diagrams</option><option>Use cases</option><option>Agile and Scrum</option></select>
+          </div>
+        </div>
+
+        <label>Type</label>
+        <label class="option"><input type="radio" name="type" value="individual"> Individual</label>
+        <label class="option"><input type="radio" name="type" value="group" checked> Group</label>
+
+        <label for="objectives">Objectives</label>
+        <textarea id="objectives" rows="3" placeholder="What will learners be able to do?"></textarea>
+
+        <div class="row">
+          <div>
+            <label for="date">Date and time</label>
+            <input type="datetime-local" id="date" required>
+          </div>
+          <div>
+            <label for="duration">Duration</label>
+            <select id="duration"><option>30 min</option><option selected>60 min</option><option>90 min</option></select>
+          </div>
+          <div>
+            <label for="capacity">Capacity</label>
+            <input type="number" id="capacity" value="6" min="1">
+          </div>
+        </div>
+
+        <label for="location">Location or meeting link</label>
+        <input type="text" id="location" placeholder="Room S-204 or https://…" required>
+
+        <div class="right"><button class="btn">Publish session</button></div>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

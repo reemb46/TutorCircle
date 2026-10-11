@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in – TutorCircle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="auth">
+    <div class="card">
+      <div class="brand">TutorCircle</div>
+
+      <div class="tabs">
+        <button type="button" class="tab" data-tab="login">Log in</button>
+        <button type="button" class="tab active" data-tab="signup">Sign up</button>
+      </div>
+
+      <form id="login" class="hidden" data-next="find-sessions.html">
+        <label for="login-email">University email</label>
+        <input type="email" id="login-email" placeholder="name@aubh.edu.bh" required>
+
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" required>
+
+        <button class="btn block">Log in</button>
+      </form>
+
+      <form id="signup" data-next="find-sessions.html">
+        <label for="name">Full name</label>
+        <input type="text" id="name" placeholder="Your name" required>
+
+        <label for="email">University email</label>
+        <input type="email" id="email" placeholder="name@aubh.edu.bh" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+
+        <label>Join as</label>
+        <label class="option"><input type="radio" name="role" value="learner" checked> Learner</label>
+        <label class="option"><input type="radio" name="role" value="tutor"> Peer tutor</label>
+
+        <button class="btn block">Create account</button>
+        <p class="muted">Tutors are approved by a coordinator before they can teach.</p>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

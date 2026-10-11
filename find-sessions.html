@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find a session – TutorCircle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">TutorCircle</div>
+      <div class="role">Learner</div>
+      <nav>
+        <a href="find-sessions.html" class="active">Find sessions</a>
+        <a href="#">My bookings</a>
+        <a href="my-learning.html">My learning</a>
+        <a href="#">Notifications</a>
+      </nav>
+      <div class="sidebar-foot">
+        <strong>Learner name</strong><br>
+        <a href="#">Settings</a> · <a href="index.html">Log out</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h1>Find a session</h1>
+
+      <form class="search">
+        <input type="search" placeholder="Search a subject or topic" aria-label="Search a subject or topic">
+        <button class="btn">Search</button>
+      </form>
+
+      <div class="columns">
+        <div class="wide">
+          <div class="filters">
+            <select aria-label="Subject"><option>Subject</option><option>SWEN 360</option></select>
+            <select aria-label="Topic"><option>Topic</option><option>UML diagrams</option><option>Use cases</option><option>Agile and Scrum</option></select>
+            <select aria-label="Format"><option>Format</option><option>In person</option><option>Online</option></select>
+            <select aria-label="Time"><option>Time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select>
+            <select aria-label="Group size"><option>Group size</option><option>1-to-1</option><option>Group</option></select>
+          </div>
+
+          <div class="card session">
+            <div>
+              <h3>UML Sequence Diagrams</h3>
+              <p class="muted">Tutor A · Sun 18 Oct, 4 PM · Group · 2 places left</p>
+            </div>
+            <a class="btn" href="session.html">View</a>
+          </div>
+          <div class="card session">
+            <div>
+              <h3>Use-case Diagrams</h3>
+              <p class="muted">Tutor B · Mon 19 Oct, 2 PM · Online · 4 places left</p>
+            </div>
+            <a class="btn" href="session.html">View</a>
+          </div>
+          <div class="card session">
+            <div>
+              <h3>Agile and Scrum</h3>
+              <p class="muted">Tutor A · Wed 21 Oct, 1 PM · 1-to-1 · 1 place left</p>
+            </div>
+            <a class="btn" href="session.html">View</a>
+          </div>
+        </div>
+
+        <aside class="card narrow">
+          <p class="muted">Tutor profile</p>
+          <h2>Tutor A <span class="pill">Approved</span></h2>
+
+          <p class="muted">Subjects and topics</p>
+          <p>SWEN 360: UML, Use cases, Agile</p>
+          <br>
+          <p class="muted">Experience</p>
+          <p>2 semesters as peer tutor</p>
+          <br>
+          <p class="muted">Availability</p>
+          <p>Sun and Mon, 2–6 PM</p>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UML Sequence Diagrams – TutorCircle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">TutorCircle</div>
+      <div class="role">Learner</div>
+      <nav>
+        <a href="find-sessions.html" class="active">Find sessions</a>
+        <a href="#">My bookings</a>
+        <a href="my-learning.html">My learning</a>
+        <a href="#">Notifications</a>
+      </nav>
+      <div class="sidebar-foot">
+        <strong>Learner name</strong><br>
+        <a href="#">Settings</a> · <a href="index.html">Log out</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="card columns">
+        <div class="wide">
+          <h1 style="margin-bottom: 6px">UML Sequence Diagrams</h1>
+          <p class="muted">Tutor A · Sun 18 Oct, 4–5 PM · Room S-204 · Group</p>
+          <p style="margin-top: 10px">Read and draw a sequence diagram</p>
+        </div>
+        <div class="narrow">
+          <p class="muted" style="margin-bottom: 8px">Places: <strong>4 / 6 booked</strong></p>
+          <button type="button" class="btn block" data-message="Place booked.">Book a place</button>
+          <button type="button" class="btn outline block" data-message="Booking cancelled.">Cancel booking</button>
+          <label class="option"><input type="checkbox" checked> Remind me 1 day before</label>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Workspace</h2>
+        <div class="tabs">
+          <button type="button" class="tab active" data-tab="materials">Materials</button>
+          <button type="button" class="tab" data-tab="questions">Questions</button>
+          <button type="button" class="tab" data-tab="prep">Prep notes</button>
+          <button type="button" class="tab" data-tab="announcements">Announcements</button>
+          <button type="button" class="tab" data-tab="attendance">Attendance (tutor only)</button>
+        </div>
+
+        <div id="materials">
+          <div class="file"><span>Cheatsheet.pdf</span><a href="#">Download</a></div>
+          <div class="file"><span>Exercise-1.docx</span><a href="#">Download</a></div>
+        </div>
+        <div id="questions" class="hidden"><p class="muted">No questions yet.</p></div>
+        <div id="prep" class="hidden"><p class="muted">No prep notes yet.</p></div>
+        <div id="announcements" class="hidden"><p class="muted">No announcements yet.</p></div>
+        <div id="attendance" class="hidden"><p class="muted">Only the tutor can see attendance.</p></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

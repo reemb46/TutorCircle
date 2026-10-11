@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My learning – TutorCircle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">TutorCircle</div>
+      <div class="role">Learner</div>
+      <nav>
+        <a href="find-sessions.html">Find sessions</a>
+        <a href="#">My bookings</a>
+        <a href="my-learning.html" class="active">My learning</a>
+        <a href="#">Notifications</a>
+      </nav>
+      <div class="sidebar-foot">
+        <strong>Learner name</strong><br>
+        <a href="#">Settings</a> · <a href="index.html">Log out</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h1>My learning</h1>
+
+      <div class="card">
+        <h2>Practice: draw the login sequence diagram <span class="pill blue">Due 20 Oct</span></h2>
+        <form class="search" style="margin-bottom: 0">
+          <input type="file" aria-label="Upload your file">
+          <button type="button" class="btn" data-message="File submitted.">Submit</button>
+        </form>
+        <p class="comment"><strong>Tutor comment:</strong> Good start. Add the return messages.</p>
+      </div>
+
+      <div class="card">
+        <h2>Session history</h2>
+        <table>
+          <tr><th>Session</th><th>Tutor</th><th>Date</th><th>Attended</th><th></th></tr>
+          <tr><td>UML Sequence Diagrams</td><td>Tutor A</td><td>18 Oct</td><td>Yes</td><td><button type="button" class="btn outline" data-message="Feedback form comes in a later sprint.">Leave feedback</button></td></tr>
+          <tr><td>Use-case Diagrams</td><td>Tutor B</td><td>12 Oct</td><td>Yes</td><td></td></tr>
+          <tr><td>Use-case Diagrams</td><td>Tutor A</td><td>9 Oct</td><td>No</td><td></td></tr>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
