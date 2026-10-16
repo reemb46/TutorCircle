@@ -25,7 +25,7 @@ Requirements are listed with **MoSCoW** priorities (Must / Should / Could). The 
 
 ### 2.2 Tutor Profiles
 - **FR-03** *(Must, Sprint 1)* — Tutors can create profiles with subjects, topic tags, experience, and availability.
-- **FR-04** *(Should, Sprint 3)* — Coordinators can approve tutor applications and subject coverage.
+- **FR-04** *(Should, Sprint 1)* — Coordinators can approve tutor applications and subject coverage.
 
 ### 2.3 Search
 - **FR-05** *(Must, Sprint 1)* — Learners can search for tutors and sessions by both subject and topic.
@@ -46,7 +46,7 @@ Requirements are listed with **MoSCoW** priorities (Must / Should / Could). The 
 
 ### 2.7 Tutor Coordination and Service Quality *(Advanced — Sprint 3)*
 - **FR-14** *(Should, Sprint 3)* — Coordinators can review tutor applications, approve subject coverage, and see reports of repeated missed sessions.
-- **FR-15** *(Should, Sprint 3)* — Feedback can be given only by learners who attended a session can.
+- **FR-15** *(Should, Sprint 3)* — Feedback can be given only by learners who attended a session.
 - **FR-16** *(Should, Sprint 3)* — Complaints and coordinator decisions are recorded and traceable.
 
 ### 2.8 Demand and Session Insights *(Advanced — Sprint 2)*
@@ -87,7 +87,7 @@ Requirements are listed with **MoSCoW** priorities (Must / Should / Could). The 
 
 ---
 
-## 4. Traceability
+## 5. Traceability
 
 | User Story | Related FRs | Related NFRs |
 |---|---|---|
@@ -100,10 +100,12 @@ Requirements are listed with **MoSCoW** priorities (Must / Should / Could). The 
 | US-07 | FR-07 | NFR-04, NFR-05 |
 | US-08 | FR-07 | — |
 | US-09 | FR-08 | NFR-04, NFR-05 |
-| US-10 | FR-09 | NFR-03 |
+| US-10 | FR-09 | — |
 | US-11 | FR-10 | — |
 | US-12 | FR-11 | — |
 | US-13 | FR-12 | — |
 | US-14 | FR-13 | NFR-09 |
 | US-15 | FR-14 | NFR-08 |
 | US-16 | FR-15, FR-16 | NFR-09 |
+| US-17 | FR-17 | NFR-03, NFR-08 |
+| US-18 | FR-18 | NFR-12 |
