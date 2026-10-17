@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard – TutorCircle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">TutorCircle</div>
+      <div class="role">Coordinator</div>
+      <nav>
+        <a href="coordinator-dashboard.html" class="active">Dashboard</a>
+        <a href="tutor-applications.html">Tutor applications</a>
+        <a href="complaints.html">Complaints</a>
+      </nav>
+      <div class="sidebar-foot">
+        <strong>Coordinator name</strong><br>
+        <a href="index.html">Log out</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="page-head">
+        <h1>Dashboard</h1>
+        <span class="pill blue">Fall 2026</span>
+      </div>
+
+      <div class="alert">
+        <p><strong>Demand alert:</strong> UML Sequence Diagrams has 14 requests (limit 10).</p>
+        <a class="btn" href="#suggestions">See suggestion</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><strong>38</strong><span>Unmet requests</span></div>
+        <div class="stat"><strong>23</strong><span>On waiting lists</span></div>
+        <div class="stat"><strong>81%</strong><span>Attendance</span></div>
+        <div class="stat"><strong>6</strong><span>Tutors available</span></div>
+      </div>
+
+      <div class="card table-wrap">
+        <h2>By subject</h2>
+        <table>
+          <tr><th>Subject</th><th>Unmet demand</th><th>Waiting list</th><th>Attendance</th><th>Tutors available</th></tr>
+          <tr><td>SWEN 360</td><td>14</td><td>9</td><td>84%</td><td>2</td></tr>
+          <tr><td>Databases</td><td>11</td><td>8</td><td>78%</td><td>1</td></tr>
+          <tr><td>Programming</td><td>13</td><td>6</td><td>80%</td><td>3</td></tr>
+        </table>
+      </div>
+
+      <div class="card table-wrap" id="suggestions">
+        <h2>Suggested extra sessions</h2>
+        <table>
+          <tr><th>Suggestion</th><th>Requests</th><th>Status</th><th></th></tr>
+          <tr><td>Extra session: UML Sequence Diagrams</td><td>14</td><td><span class="pill warn">Pending</span></td>
+              <td class="actions"><button type="button" class="btn" data-status="Accepted" data-kind="">Accept</button> <button type="button" class="btn outline" data-status="Ignored" data-kind="grey">Ignore</button></td></tr>
+          <tr><td>Extra session: SQL Joins</td><td>11</td><td><span class="pill">Accepted</span></td><td class="actions"><span class="muted">12 Oct</span></td></tr>
+        </table>
+        <form class="inline-form" style="margin-top: 16px; max-width: 420px" data-done="Limit saved.">
+          <div>
+            <label for="limit">Suggest a session when requests go over</label>
+            <input type="number" id="limit" value="10" min="1">
+          </div>
+          <button class="btn outline">Save limit</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
