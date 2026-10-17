@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tutor applications – TutorCircle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">TutorCircle</div>
+      <div class="role">Coordinator</div>
+      <nav>
+        <a href="coordinator-dashboard.html">Dashboard</a>
+        <a href="tutor-applications.html" class="active">Tutor applications</a>
+        <a href="complaints.html">Complaints</a>
+      </nav>
+      <div class="sidebar-foot">
+        <strong>Coordinator name</strong><br>
+        <a href="index.html">Log out</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h1>Tutor applications</h1>
+
+      <div class="card table-wrap">
+        <h2>Applications</h2>
+        <table>
+          <tr><th>Applicant</th><th>Subjects and topics</th><th>Experience</th><th>Status</th><th></th></tr>
+          <tr><td>Applicant 1</td><td>Databases: SQL, ER modelling</td><td>New tutor</td><td><span class="pill warn">Pending</span></td>
+              <td class="actions"><button type="button" class="btn" data-status="Approved" data-kind="">Approve</button> <button type="button" class="btn outline" data-status="Rejected" data-kind="bad">Reject</button></td></tr>
+          <tr><td>Applicant 2</td><td>Programming: Recursion, Lists</td><td>1 semester</td><td><span class="pill warn">Pending</span></td>
+              <td class="actions"><button type="button" class="btn" data-status="Approved" data-kind="">Approve</button> <button type="button" class="btn outline" data-status="Rejected" data-kind="bad">Reject</button></td></tr>
+          <tr><td>Applicant 5</td><td>Programming: Lists</td><td>New tutor</td><td><span class="pill">Approved</span></td><td class="actions"><span class="muted">10 Oct</span></td></tr>
+        </table>
+        <p class="muted" style="margin-top: 12px">Rejected tutors are hidden from student search.</p>
+      </div>
+
+      <div class="card table-wrap">
+        <h2>Repeated missed sessions</h2>
+        <table>
+          <tr><th>Tutor</th><th>Missed this term</th><th>Last missed</th><th></th></tr>
+          <tr><td>Tutor G</td><td><span class="pill bad">4 missed</span></td><td>14 Oct</td><td class="actions"><a class="btn outline" href="complaints.html">Record a decision</a></td></tr>
+          <tr><td>Tutor K</td><td><span class="pill bad">3 missed</span></td><td>9 Oct</td><td class="actions"><a class="btn outline" href="complaints.html">Record a decision</a></td></tr>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
