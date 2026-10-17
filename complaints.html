@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Complaints – TutorCircle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">TutorCircle</div>
+      <div class="role">Coordinator</div>
+      <nav>
+        <a href="coordinator-dashboard.html">Dashboard</a>
+        <a href="tutor-applications.html">Tutor applications</a>
+        <a href="complaints.html" class="active">Complaints</a>
+      </nav>
+      <div class="sidebar-foot">
+        <strong>Coordinator name</strong><br>
+        <a href="index.html">Log out</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h1>Complaints</h1>
+
+      <div class="card table-wrap">
+        <table>
+          <tr><th>Complaint</th><th>From</th><th>About</th><th>Status</th></tr>
+          <tr><td>Tutor did not show up</td><td>Learner 3</td><td>Tutor G · Recursion Basics</td><td><span class="pill warn">Open</span></td></tr>
+          <tr><td>Session started 20 minutes late</td><td>Learner 7</td><td>Tutor K · Lists</td><td><span class="pill">Resolved</span></td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>Record a decision</h2>
+        <form data-append="#decision-log" data-prefix="Tutor G: " data-message="Decision recorded.">
+          <label for="decision" style="margin-top: 0">Decision for: Tutor did not show up (Tutor G)</label>
+          <textarea id="decision" rows="3" placeholder="e.g. Warning sent. Tutor G suspended for one week."></textarea>
+          <div class="right"><button class="btn">Save decision</button></div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Decision history</h2>
+        <ul class="list" id="decision-log">
+          <li>Tutor K: Late start confirmed. Reminder about start times sent.<small>Coordinator name · 12 Oct</small></li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
