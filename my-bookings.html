@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My bookings – TutorCircle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">TutorCircle</div>
+      <div class="role">Learner</div>
+      <nav>
+        <a href="find-sessions.html">Find sessions</a>
+        <a href="my-bookings.html" class="active">My bookings</a>
+        <a href="my-learning.html">My learning</a>
+        <a href="notifications.html">Notifications</a>
+      </nav>
+      <div class="sidebar-foot">
+        <strong>Learner name</strong><br>
+        <a href="index.html">Log out</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h1>My bookings</h1>
+
+      <div class="card table-wrap">
+        <table>
+          <tr><th>Session</th><th>Tutor</th><th>Date</th><th>Status</th><th></th></tr>
+          <tr><td>UML Sequence Diagrams</td><td>Tutor A</td><td>Sun 18 Oct, 4 PM</td><td><span class="pill">Confirmed</span></td>
+              <td class="actions"><a class="btn outline" href="session.html">View</a> <button type="button" class="btn outline" data-remove-row="Cancel this booking?">Cancel</button></td></tr>
+          <tr><td>SQL Joins</td><td>Tutor B</td><td>Tue 20 Oct, 10 AM</td><td><span class="pill warn">Waiting list #2</span></td>
+              <td class="actions"><a class="btn outline" href="session.html">View</a> <button type="button" class="btn outline" data-remove-row="Leave the waiting list?">Leave list</button></td></tr>
+        </table>
+      </div>
+      <p class="muted">You get a reminder 1 day before each session. If a place opens, the first person on the waiting list is booked automatically.</p>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
