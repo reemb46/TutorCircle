@@ -10,34 +10,33 @@
   <div class="app">
     <aside class="sidebar">
       <div class="brand">TutorCircle</div>
-      <div class="role">Tutor</div>
+      <div class="role">Peer tutor</div>
       <nav>
-        <a href="#">My sessions</a>
+        <a href="my-sessions.html">My sessions</a>
         <a href="create-session.html" class="active">Create session</a>
-        <a href="#">My profile</a>
-        <a href="#">Notifications</a>
+        <a href="my-profile.html">My profile</a>
       </nav>
       <div class="sidebar-foot">
         <strong>Tutor name</strong><br>
-        <a href="#">Settings</a> · <a href="index.html">Log out</a>
+        <a href="index.html">Log out</a>
       </div>
     </aside>
 
     <main class="main">
       <h1>Create a session</h1>
 
-      <form class="card" style="max-width: 790px" data-next="session.html">
+      <form class="card" style="max-width: 790px" data-next="tutor-session.html">
         <label for="title" style="margin-top: 0">Title</label>
         <input type="text" id="title" placeholder="e.g. UML Sequence Diagrams" required>
 
         <div class="row">
           <div>
             <label for="subject">Subject</label>
-            <select id="subject"><option>SWEN 360</option></select>
+            <select id="subject"><option>SWEN 360</option><option>Databases</option><option>Programming</option></select>
           </div>
           <div>
             <label for="topic">Topic</label>
-            <select id="topic"><option>UML diagrams</option><option>Use cases</option><option>Agile and Scrum</option></select>
+            <select id="topic"><option>UML diagrams</option><option>Use cases</option><option>Agile</option><option>SQL</option><option>Recursion</option></select>
           </div>
         </div>
 
@@ -46,7 +45,7 @@
         <label class="option"><input type="radio" name="type" value="group" checked> Group</label>
 
         <label for="objectives">Objectives</label>
-        <textarea id="objectives" rows="3" placeholder="What will learners be able to do?"></textarea>
+        <textarea id="objectives" rows="3" placeholder="What will learners be able to do?" required></textarea>
 
         <div class="row">
           <div>
@@ -59,12 +58,13 @@
           </div>
           <div>
             <label for="capacity">Capacity</label>
-            <input type="number" id="capacity" value="6" min="1">
+            <input type="number" id="capacity" value="6" min="1" required>
           </div>
         </div>
 
         <label for="location">Location or meeting link</label>
         <input type="text" id="location" placeholder="Room S-204 or https://…" required>
+        <p class="muted">Only students who booked can see the location or link.</p>
 
         <div class="right"><button class="btn">Publish session</button></div>
       </form>
