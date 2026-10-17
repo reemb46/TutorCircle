@@ -13,13 +13,13 @@
       <div class="role">Learner</div>
       <nav>
         <a href="find-sessions.html" class="active">Find sessions</a>
-        <a href="#">My bookings</a>
+        <a href="my-bookings.html">My bookings</a>
         <a href="my-learning.html">My learning</a>
-        <a href="#">Notifications</a>
+        <a href="notifications.html">Notifications</a>
       </nav>
       <div class="sidebar-foot">
         <strong>Learner name</strong><br>
-        <a href="#">Settings</a> · <a href="index.html">Log out</a>
+        <a href="index.html">Log out</a>
       </div>
     </aside>
 
@@ -27,13 +27,13 @@
       <div class="card columns">
         <div class="wide">
           <h1 style="margin-bottom: 6px">UML Sequence Diagrams</h1>
-          <p class="muted">Tutor A · Sun 18 Oct, 4–5 PM · Room S-204 · Group</p>
-          <p style="margin-top: 10px">Read and draw a sequence diagram</p>
+          <p class="muted">Tutor A · Sun 18 Oct, 4–5 PM · Group · Location: <strong id="location">Shown after you book</strong></p>
+          <p style="margin-top: 10px"><strong>Objectives:</strong> Read and draw a sequence diagram.</p>
         </div>
         <div class="narrow">
-          <p class="muted" style="margin-bottom: 8px">Places: <strong>4 / 6 booked</strong></p>
-          <button type="button" class="btn block" data-message="Place booked.">Book a place</button>
-          <button type="button" class="btn outline block" data-message="Booking cancelled.">Cancel booking</button>
+          <p class="muted" style="margin-bottom: 8px">Places: <strong id="places" data-count="4" data-capacity="6" data-location="Room S-204">4 / 6 booked</strong></p>
+          <button type="button" class="btn block" id="book">Book a place</button>
+          <button type="button" class="btn outline block" id="cancel">Cancel booking</button>
           <label class="option"><input type="checkbox" checked> Remind me 1 day before</label>
         </div>
       </div>
@@ -45,17 +45,42 @@
           <button type="button" class="tab" data-tab="questions">Questions</button>
           <button type="button" class="tab" data-tab="prep">Prep notes</button>
           <button type="button" class="tab" data-tab="announcements">Announcements</button>
-          <button type="button" class="tab" data-tab="attendance">Attendance (tutor only)</button>
         </div>
 
         <div id="materials">
           <div class="file"><span>Cheatsheet.pdf</span><a href="#">Download</a></div>
           <div class="file"><span>Exercise-1.docx</span><a href="#">Download</a></div>
         </div>
-        <div id="questions" class="hidden"><p class="muted">No questions yet.</p></div>
-        <div id="prep" class="hidden"><p class="muted">No prep notes yet.</p></div>
-        <div id="announcements" class="hidden"><p class="muted">No announcements yet.</p></div>
-        <div id="attendance" class="hidden"><p class="muted">Only the tutor can see attendance.</p></div>
+
+        <div id="questions" class="hidden">
+          <ul class="list" id="question-list">
+            <li>Do we need StarUML installed, or is paper fine?<small>Learner name · Tutor A: Paper is fine.</small></li>
+          </ul>
+          <form class="inline-form" data-append="#question-list" data-prefix="You: " data-message="Question posted. Your tutor can see it.">
+            <div>
+              <label for="question">Ask the tutor before the session</label>
+              <input type="text" id="question" placeholder="What do you need help with?">
+            </div>
+            <button class="btn">Post</button>
+          </form>
+        </div>
+
+        <div id="prep" class="hidden">
+          <ul class="list" id="prep-list">
+            <li>I get confused about return messages.<small>Your prep note</small></li>
+          </ul>
+          <form data-append="#prep-list" data-message="Prep note saved.">
+            <label for="prep-text">Add a prep note or study material link</label>
+            <textarea id="prep-text" rows="3"></textarea>
+            <div class="right"><button class="btn">Save note</button></div>
+          </form>
+        </div>
+
+        <div id="announcements" class="hidden">
+          <ul class="list">
+            <li>We will start on time at 4 PM in Room S-204.<small>Tutor A · 17 Oct</small></li>
+          </ul>
+        </div>
       </div>
     </main>
   </div>
