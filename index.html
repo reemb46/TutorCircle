@@ -12,11 +12,11 @@
       <div class="brand">TutorCircle</div>
 
       <div class="tabs">
-        <button type="button" class="tab" data-tab="login">Log in</button>
-        <button type="button" class="tab active" data-tab="signup">Sign up</button>
+        <button type="button" class="tab active" data-tab="login">Log in</button>
+        <button type="button" class="tab" data-tab="signup">Sign up</button>
       </div>
 
-      <form id="login" class="hidden" data-next="find-sessions.html">
+      <form id="login" data-next="find-sessions.html">
         <label for="login-email">University email</label>
         <input type="email" id="login-email" placeholder="name@aubh.edu.bh" required>
 
@@ -24,9 +24,17 @@
         <input type="password" id="login-password" required>
 
         <button class="btn block">Log in</button>
+
+        <div class="demo">
+          <strong>Demo:</strong> open the site as each role.<br>
+          <a href="find-sessions.html">Student</a>
+          <a href="my-sessions.html">Peer tutor</a>
+          <a href="coordinator-dashboard.html">Coordinator</a>
+          <a href="admin-users.html">Admin</a>
+        </div>
       </form>
 
-      <form id="signup" data-next="find-sessions.html">
+      <form id="signup" class="hidden" data-next="find-sessions.html" data-next-tutor="my-profile.html">
         <label for="name">Full name</label>
         <input type="text" id="name" placeholder="Your name" required>
 
@@ -41,7 +49,7 @@
         <label class="option"><input type="radio" name="role" value="tutor"> Peer tutor</label>
 
         <button class="btn block">Create account</button>
-        <p class="muted">Tutors are approved by a coordinator before they can teach.</p>
+        <p class="muted">Tutors are approved by a coordinator before they can teach. Coordinator and admin accounts are created by an admin.</p>
       </form>
     </div>
   </main>
