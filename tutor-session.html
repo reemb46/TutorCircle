@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Session workspace – TutorCircle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">TutorCircle</div>
+      <div class="role">Peer tutor</div>
+      <nav>
+        <a href="my-sessions.html" class="active">My sessions</a>
+        <a href="create-session.html">Create session</a>
+        <a href="my-profile.html">My profile</a>
+      </nav>
+      <div class="sidebar-foot">
+        <strong>Tutor name</strong><br>
+        <a href="index.html">Log out</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="card columns">
+        <div class="wide">
+          <h1 style="margin-bottom: 6px">UML Sequence Diagrams</h1>
+          <p class="muted">Sun 18 Oct, 4–5 PM · Room S-204 · Group</p>
+          <p style="margin-top: 10px"><strong>Objectives:</strong> Read and draw a sequence diagram.</p>
+        </div>
+        <div class="narrow">
+          <p class="muted">Places: <strong>4 / 6 booked</strong> · 0 waiting</p>
+          <p class="muted">Reminders are sent automatically 1 day before.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Workspace</h2>
+        <div class="tabs">
+          <button type="button" class="tab active" data-tab="t-materials">Materials</button>
+          <button type="button" class="tab" data-tab="t-announcements">Announcements</button>
+          <button type="button" class="tab" data-tab="t-questions">Questions</button>
+          <button type="button" class="tab" data-tab="t-attendance">Attendance</button>
+          <button type="button" class="tab" data-tab="t-practice">Practice work</button>
+        </div>
+
+        <div id="t-materials">
+          <div class="file"><span>Cheatsheet.pdf</span><span class="muted">Uploaded 15 Oct</span></div>
+          <div class="file"><span>Exercise-1.docx</span><span class="muted">Uploaded 15 Oct</span></div>
+          <form class="inline-form" data-done="Material uploaded. Booked students can download it.">
+            <div>
+              <label for="material">Upload a learning material</label>
+              <input type="file" id="material" required>
+            </div>
+            <button class="btn">Upload</button>
+          </form>
+        </div>
+
+        <div id="t-announcements" class="hidden">
+          <ul class="list" id="announcement-list">
+            <li>We will start on time at 4 PM in Room S-204.<small>17 Oct</small></li>
+          </ul>
+          <form class="inline-form" data-append="#announcement-list" data-message="Announcement posted to everyone booked.">
+            <div>
+              <label for="announcement">New announcement</label>
+              <input type="text" id="announcement" placeholder="Tell everyone who booked">
+            </div>
+            <button class="btn">Post</button>
+          </form>
+        </div>
+
+        <div id="t-questions" class="hidden">
+          <ul class="list">
+            <li><strong>Learner 1:</strong> Do we need StarUML installed, or is paper fine?<small>Prep note: I get confused about return messages.</small></li>
+          </ul>
+          <form class="inline-form" data-done="Answer posted.">
+            <div>
+              <label for="answer">Answer</label>
+              <input type="text" id="answer" placeholder="Write an answer" required>
+            </div>
+            <button class="btn">Answer</button>
+          </form>
+        </div>
+
+        <div id="t-attendance" class="hidden">
+          <form data-done="Attendance saved. Absent students are counted as no-shows.">
+            <ul class="list">
+              <li><label class="option"><input type="checkbox" checked> Learner 1</label></li>
+              <li><label class="option"><input type="checkbox" checked> Learner 2</label></li>
+              <li><label class="option"><input type="checkbox"> Learner 3</label></li>
+              <li><label class="option"><input type="checkbox" checked> Learner 4</label></li>
+            </ul>
+            <div class="right"><button class="btn">Save attendance</button></div>
+          </form>
+        </div>
+
+        <div id="t-practice" class="hidden">
+          <p style="margin-bottom: 12px"><strong>Practice:</strong> draw the login sequence diagram <span class="pill blue">Due 20 Oct</span></p>
+          <div class="file"><span>Learner 1 · login-sequence-v1.png</span><a href="#">Download</a></div>
+          <form class="inline-form" data-done="Comment sent to the student.">
+            <div>
+              <label for="tutor-comment">Comment for Learner 1</label>
+              <input type="text" id="tutor-comment" value="Good start. Add the return messages." required>
+            </div>
+            <button class="btn">Send comment</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
