@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Users and roles – TutorCircle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">TutorCircle</div>
+      <div class="role">Admin</div>
+      <nav>
+        <a href="admin-users.html" class="active">Users and roles</a>
+      </nav>
+      <div class="sidebar-foot">
+        <strong>Admin name</strong><br>
+        <a href="index.html">Log out</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h1>Users and roles</h1>
+
+      <div class="card table-wrap">
+        <table>
+          <tr><th>Name</th><th>Email</th><th>Role</th><th></th></tr>
+          <tr><td>Learner name</td><td>learner@aubh.edu.bh</td><td><select aria-label="Role for Learner name"><option selected>Learner</option><option>Peer tutor</option><option>Coordinator</option><option>Admin</option></select></td>
+              <td class="actions"><button type="button" class="btn outline" data-message="Role saved for Learner name.">Save</button></td></tr>
+          <tr><td>Tutor A</td><td>tutor.a@aubh.edu.bh</td><td><select aria-label="Role for Tutor A"><option>Learner</option><option selected>Peer tutor</option><option>Coordinator</option><option>Admin</option></select></td>
+              <td class="actions"><button type="button" class="btn outline" data-message="Role saved for Tutor A.">Save</button></td></tr>
+          <tr><td>Coordinator name</td><td>coordinator@aubh.edu.bh</td><td><select aria-label="Role for Coordinator name"><option>Learner</option><option>Peer tutor</option><option selected>Coordinator</option><option>Admin</option></select></td>
+              <td class="actions"><button type="button" class="btn outline" data-message="Role saved for Coordinator name.">Save</button></td></tr>
+          <tr><td>Admin name</td><td>admin@aubh.edu.bh</td><td><select aria-label="Role for Admin name"><option>Learner</option><option>Peer tutor</option><option>Coordinator</option><option selected>Admin</option></select></td>
+              <td class="actions"><button type="button" class="btn outline" data-message="Role saved for Admin name.">Save</button></td></tr>
+        </table>
+      </div>
+
+      <form class="card" style="max-width: 790px" data-done="Account created. They will get an email to set a password.">
+        <h2>Create a staff account</h2>
+        <div class="row">
+          <div><label for="staff-name">Full name</label><input type="text" id="staff-name" required></div>
+          <div><label for="staff-email">University email</label><input type="email" id="staff-email" placeholder="name@aubh.edu.bh" required></div>
+          <div><label for="staff-role">Role</label><select id="staff-role"><option>Coordinator</option><option>Admin</option></select></div>
+        </div>
+        <div class="right"><button class="btn">Create account</button></div>
+      </form>
+
+      <div class="card table-wrap">
+        <h2>What each role can open</h2>
+        <table>
+          <tr><th>Role</th><th>Pages</th></tr>
+          <tr><td>Learner</td><td>Find sessions, session page, My bookings, My learning, Notifications</td></tr>
+          <tr><td>Peer tutor</td><td>My sessions, Create session, session workspace, My profile</td></tr>
+          <tr><td>Coordinator</td><td>Dashboard, Tutor applications, Complaints</td></tr>
+          <tr><td>Admin</td><td>Users and roles</td></tr>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
