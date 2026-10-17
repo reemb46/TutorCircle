@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My profile – TutorCircle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">TutorCircle</div>
+      <div class="role">Peer tutor</div>
+      <nav>
+        <a href="my-sessions.html">My sessions</a>
+        <a href="create-session.html">Create session</a>
+        <a href="my-profile.html" class="active">My profile</a>
+      </nav>
+      <div class="sidebar-foot">
+        <strong>Tutor name</strong><br>
+        <a href="index.html">Log out</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="page-head">
+        <h1>My profile</h1>
+        <span class="pill warn">Waiting for coordinator approval</span>
+      </div>
+
+      <form class="card" style="max-width: 790px" data-done="Profile saved. Students will see it once a coordinator approves you.">
+        <label for="p-name" style="margin-top: 0">Name</label>
+        <input type="text" id="p-name" value="Tutor name" required>
+
+        <label for="p-subjects">Subjects you can teach</label>
+        <select id="p-subjects" multiple size="3"><option selected>SWEN 360</option><option>Databases</option><option>Programming</option></select>
+
+        <label for="p-topics">Topic tags</label>
+        <input type="text" id="p-topics" placeholder="e.g. UML, Use cases, Agile">
+
+        <label for="p-experience">Experience</label>
+        <input type="text" id="p-experience" placeholder="e.g. 2 semesters as peer tutor">
+
+        <label for="p-availability">Availability</label>
+        <input type="text" id="p-availability" placeholder="e.g. Sun and Mon, 2–6 PM">
+
+        <div class="right"><button class="btn">Save profile</button></div>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
