@@ -13,13 +13,13 @@
       <div class="role">Learner</div>
       <nav>
         <a href="find-sessions.html">Find sessions</a>
-        <a href="#">My bookings</a>
+        <a href="my-bookings.html">My bookings</a>
         <a href="my-learning.html" class="active">My learning</a>
-        <a href="#">Notifications</a>
+        <a href="notifications.html">Notifications</a>
       </nav>
       <div class="sidebar-foot">
         <strong>Learner name</strong><br>
-        <a href="#">Settings</a> · <a href="index.html">Log out</a>
+        <a href="index.html">Log out</a>
       </div>
     </aside>
 
@@ -28,22 +28,36 @@
 
       <div class="card">
         <h2>Practice: draw the login sequence diagram <span class="pill blue">Due 20 Oct</span></h2>
-        <form class="search" style="margin-bottom: 0">
-          <input type="file" aria-label="Upload your file">
-          <button type="button" class="btn" data-message="File submitted.">Submit</button>
+        <form class="inline-form" data-done="File submitted. Your tutor will comment on it.">
+          <div>
+            <label for="practice-file">Upload your file</label>
+            <input type="file" id="practice-file" required>
+          </div>
+          <button class="btn">Submit</button>
         </form>
         <p class="comment"><strong>Tutor comment:</strong> Good start. Add the return messages.</p>
       </div>
 
-      <div class="card">
+      <div class="card table-wrap">
         <h2>Session history</h2>
         <table>
           <tr><th>Session</th><th>Tutor</th><th>Date</th><th>Attended</th><th></th></tr>
-          <tr><td>UML Sequence Diagrams</td><td>Tutor A</td><td>18 Oct</td><td>Yes</td><td><button type="button" class="btn outline" data-message="Feedback form comes in a later sprint.">Leave feedback</button></td></tr>
-          <tr><td>Use-case Diagrams</td><td>Tutor B</td><td>12 Oct</td><td>Yes</td><td></td></tr>
-          <tr><td>Use-case Diagrams</td><td>Tutor A</td><td>9 Oct</td><td>No</td><td></td></tr>
+          <tr><td>UML Sequence Diagrams</td><td>Tutor A</td><td>8 Oct</td><td>Yes</td>
+              <td class="actions"><button type="button" class="btn outline" data-toggle="#feedback-form">Leave feedback</button></td></tr>
+          <tr><td>Use-case Diagrams</td><td>Tutor B</td><td>5 Oct</td><td>Yes</td><td class="actions"><span class="muted">Feedback sent</span></td></tr>
+          <tr><td>Use-case Diagrams</td><td>Tutor A</td><td>2 Oct</td><td>No</td><td class="actions"><span class="muted">Only after attending</span></td></tr>
         </table>
       </div>
+
+      <form class="card hidden" id="feedback-form" data-done="Thanks. Only you and your tutor can see this feedback." data-hide-after>
+        <h2>Feedback: UML Sequence Diagrams</h2>
+        <label for="rating">How useful was it?</label>
+        <select id="rating"><option>5 – Very useful</option><option>4</option><option>3</option><option>2</option><option>1 – Not useful</option></select>
+        <label for="feedback">Comment (optional)</label>
+        <textarea id="feedback" rows="3"></textarea>
+        <label for="complaint" class="option"><input type="checkbox" id="complaint"> Send this to the coordinator as a complaint</label>
+        <div class="right"><button class="btn">Send feedback</button></div>
+      </form>
     </main>
   </div>
 
