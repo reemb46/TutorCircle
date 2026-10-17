@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My sessions – TutorCircle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">TutorCircle</div>
+      <div class="role">Peer tutor</div>
+      <nav>
+        <a href="my-sessions.html" class="active">My sessions</a>
+        <a href="create-session.html">Create session</a>
+        <a href="my-profile.html">My profile</a>
+      </nav>
+      <div class="sidebar-foot">
+        <strong>Tutor name</strong><br>
+        <a href="index.html">Log out</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="page-head">
+        <h1>My sessions</h1>
+        <a class="btn" href="create-session.html">Create session</a>
+      </div>
+      <p class="muted" style="margin-bottom: 16px">Your status: <span class="pill">Approved</span> · Reminders go to booked students 1 day before each session.</p>
+
+      <div class="card table-wrap">
+        <table>
+          <tr><th>Session</th><th>Date</th><th>Type</th><th>Booked</th><th>Waiting</th><th></th></tr>
+          <tr><td>UML Sequence Diagrams</td><td>Sun 18 Oct, 4 PM</td><td>Group</td><td>4 / 6</td><td>0</td><td class="actions"><a class="btn" href="tutor-session.html">Open</a></td></tr>
+          <tr><td>Agile and Scrum</td><td>Wed 21 Oct, 1 PM</td><td>1-to-1</td><td>0 / 1</td><td>0</td><td class="actions"><a class="btn" href="tutor-session.html">Open</a></td></tr>
+          <tr><td>Use-case Diagrams</td><td>2 Oct</td><td>Group</td><td>6 / 8</td><td>–</td><td class="actions"><span class="pill grey">Finished</span></td></tr>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
