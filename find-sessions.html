@@ -13,69 +13,102 @@
       <div class="role">Learner</div>
       <nav>
         <a href="find-sessions.html" class="active">Find sessions</a>
-        <a href="#">My bookings</a>
+        <a href="my-bookings.html">My bookings</a>
         <a href="my-learning.html">My learning</a>
-        <a href="#">Notifications</a>
+        <a href="notifications.html">Notifications</a>
       </nav>
       <div class="sidebar-foot">
         <strong>Learner name</strong><br>
-        <a href="#">Settings</a> · <a href="index.html">Log out</a>
+        <a href="index.html">Log out</a>
       </div>
     </aside>
 
     <main class="main">
       <h1>Find a session</h1>
 
-      <form class="search">
-        <input type="search" placeholder="Search a subject or topic" aria-label="Search a subject or topic">
+      <form class="search" id="search-form" role="search">
+        <input type="search" id="search-text" placeholder="Search a subject, topic or tutor" aria-label="Search a subject, topic or tutor">
         <button class="btn">Search</button>
       </form>
 
       <div class="columns">
         <div class="wide">
           <div class="filters">
-            <select aria-label="Subject"><option>Subject</option><option>SWEN 360</option></select>
-            <select aria-label="Topic"><option>Topic</option><option>UML diagrams</option><option>Use cases</option><option>Agile and Scrum</option></select>
-            <select aria-label="Format"><option>Format</option><option>In person</option><option>Online</option></select>
-            <select aria-label="Time"><option>Time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select>
-            <select aria-label="Group size"><option>Group size</option><option>1-to-1</option><option>Group</option></select>
+            <select name="subject" aria-label="Subject"><option value="">Subject</option><option>SWEN 360</option><option>Databases</option><option>Programming</option></select>
+            <select name="topic" aria-label="Topic"><option value="">Topic</option><option>UML diagrams</option><option>Use cases</option><option>Agile</option><option>SQL</option><option>Recursion</option></select>
+            <select name="format" aria-label="Format"><option value="">Format</option><option value="in-person">In person</option><option value="online">Online</option></select>
+            <select name="time" aria-label="Time"><option value="">Time</option><option value="morning">Morning</option><option value="afternoon">Afternoon</option><option value="evening">Evening</option></select>
+            <select name="size" aria-label="Group size"><option value="">Group size</option><option value="one">1-to-1</option><option value="small">Small group (2–4)</option><option value="large">Large group (5+)</option></select>
           </div>
 
-          <div class="card session">
+          <div class="card session" data-session data-subject="SWEN 360" data-topic="UML diagrams" data-format="in-person" data-time="afternoon" data-size="large">
             <div>
               <h3>UML Sequence Diagrams</h3>
-              <p class="muted">Tutor A · Sun 18 Oct, 4 PM · Group · 2 places left</p>
+              <p class="muted">Tutor A · Sun 18 Oct, 4 PM · Group · In person · 2 places left</p>
+              <p class="muted">SWEN 360 · UML diagrams</p>
             </div>
             <a class="btn" href="session.html">View</a>
           </div>
-          <div class="card session">
+          <div class="card session" data-session data-subject="SWEN 360" data-topic="Use cases" data-format="online" data-time="afternoon" data-size="large">
             <div>
               <h3>Use-case Diagrams</h3>
-              <p class="muted">Tutor B · Mon 19 Oct, 2 PM · Online · 4 places left</p>
+              <p class="muted">Tutor B · Mon 19 Oct, 2 PM · Group · Online · 4 places left</p>
+              <p class="muted">SWEN 360 · Use cases</p>
             </div>
             <a class="btn" href="session.html">View</a>
           </div>
-          <div class="card session">
+          <div class="card session" data-session data-subject="Databases" data-topic="SQL" data-format="in-person" data-time="morning" data-size="small">
+            <div>
+              <h3>SQL Joins</h3>
+              <p class="muted">Tutor B · Tue 20 Oct, 10 AM · Group · In person · Full · join waiting list</p>
+              <p class="muted">Databases · SQL</p>
+            </div>
+            <a class="btn" href="session.html">View</a>
+          </div>
+          <div class="card session" data-session data-subject="SWEN 360" data-topic="Agile" data-format="in-person" data-time="afternoon" data-size="one">
             <div>
               <h3>Agile and Scrum</h3>
-              <p class="muted">Tutor A · Wed 21 Oct, 1 PM · 1-to-1 · 1 place left</p>
+              <p class="muted">Tutor A · Wed 21 Oct, 1 PM · 1-to-1 · In person · 1 place left</p>
+              <p class="muted">SWEN 360 · Agile</p>
             </div>
             <a class="btn" href="session.html">View</a>
           </div>
+          <div class="card session" data-session data-subject="Programming" data-topic="Recursion" data-format="online" data-time="evening" data-size="small">
+            <div>
+              <h3>Recursion Basics</h3>
+              <p class="muted">Tutor G · Thu 22 Oct, 6 PM · Group · Online · 3 places left</p>
+              <p class="muted">Programming · Recursion</p>
+            </div>
+            <a class="btn" href="session.html">View</a>
+          </div>
+          <p id="no-results" class="empty hidden">No sessions match. Try another topic or clear a filter.</p>
         </div>
 
-        <aside class="card narrow">
-          <p class="muted">Tutor profile</p>
-          <h2>Tutor A <span class="pill">Approved</span></h2>
-
-          <p class="muted">Subjects and topics</p>
-          <p>SWEN 360: UML, Use cases, Agile</p>
-          <br>
-          <p class="muted">Experience</p>
-          <p>2 semesters as peer tutor</p>
-          <br>
-          <p class="muted">Availability</p>
-          <p>Sun and Mon, 2–6 PM</p>
+        <aside class="narrow">
+          <h2>Tutors</h2>
+          <div class="card" data-tutor>
+            <h2>Tutor A <span class="pill">Approved</span></h2>
+            <p class="muted">Subjects and topics</p>
+            <p>SWEN 360: UML, Use cases, Agile</p>
+            <br>
+            <p class="muted">Experience</p>
+            <p>2 semesters as peer tutor</p>
+            <br>
+            <p class="muted">Availability</p>
+            <p>Sun and Mon, 2–6 PM</p>
+          </div>
+          <div class="card" data-tutor>
+            <h2>Tutor B <span class="pill">Approved</span></h2>
+            <p class="muted">Subjects and topics</p>
+            <p>SWEN 360: Use cases. Databases: SQL</p>
+            <br>
+            <p class="muted">Experience</p>
+            <p>1 semester as peer tutor</p>
+            <br>
+            <p class="muted">Availability</p>
+            <p>Mon and Tue, 10 AM–3 PM</p>
+          </div>
+          <p class="muted">Only tutors approved by a coordinator appear here.</p>
         </aside>
       </div>
     </main>
