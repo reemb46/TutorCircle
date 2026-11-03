@@ -39,3 +39,27 @@ Transition to Sprint 2, assign the new Scrum Master role, review requirements fo
 - [ ] Noor: Review rubric for Ethical Design Statement.
 
 ---
+## Stand-up (2)
+
+**Date:** 3/11/2026
+**Duration:** 15 mins
+**Attendees:** Hashem Alzayer (Scrum Master), Haya Albinali, Noor Alawadhi, Mariam Abdulmalek, Latifa Qadheeb, Reem Bucheery
+**Meeting Type:** Stand-up
+
+### Discussion
+- **Component Diagram:** Reem completed the first draft of the Component Diagram.
+- **Sequence Diagram:** Latifa has started drafting the Sequence Diagram.
+- **Architecture Analysis:** Mariam has completed research on the Layered architecture and decided to draft that section. Haya has completed research on Microservices and will draft that section.
+- **Burndown Chart:** Hashem (Scrum Master) began setting up the Burndown chart
+
+### Obstacles Faced
+- No blockers reported during this stand-up. Everyone is progressing on their assigned tasks.
+
+### Action Items
+- [ ] Reem: Finalize Component Diagram based on team feedback.
+- [ ] Latifa: Continue drafting the Sequence Diagram.
+- [ ] Mariam & Haya: Continue drafting the Architecture Analysis Report sections.
+- [ ] Hashem: Continue tracking tasks for the Burndown chart.
+<img width="1242" height="1391" alt="image" src="https://github.com/user-attachments/assets/026ef356-15de-48e3-8900-e3c746b52ae3" />
+
+---
