@@ -1,3 +1,14 @@
+## Quick Log Summary
+| Meeting | Date | One-Liner Summary |
+| :--- | :--- | :--- |
+| Stand-up 1 | [1/22/2026] | Team reviewed Assignment 2 requirements and assigned all design and architecture tasks. |
+| Stand-up 2 | [3/11/2026] | Component and sequence diagrams in progress, architecture research complete, burndown chart started. |
+| Stand-up 3 | [8/11/2026] | Sequence diagram progressing well; component diagram pending Miss Syeda's approval; migrating tasks to new Kanban board. |
+
+---
+
+
+
 # Sprint 2 - Meeting Minutes
 
 This document contains the official log of all stand-up meetings, sprint planning, and ceremonies for Sprint 2.
@@ -63,3 +74,26 @@ Transition to Sprint 2, assign the new Scrum Master role, review requirements fo
 <img width="1242" height="1391" alt="image" src="https://github.com/user-attachments/assets/026ef356-15de-48e3-8900-e3c746b52ae3" />
 
 ---
+
+## Stand-up (3)
+
+**Date:** [8/11/2026]
+**Duration:** 15 mins
+**Attendees:** Hashem Alzayer (Scrum Master), Haya Albinali, Noor Alawadhi, Mariam Abdulmalek, Latifa Qadheeb, Reem Bucheery
+**Meeting Type:** Stand-up
+
+### Discussion
+- **Kanban Board:** The team discussed the instructor's requirement to create a new Kanban board specifically for Sprint 2. Hashem will migrate the open Sprint 2 issues to it.
+- **Component Diagram:** The team discussed ways to improve the current draft. 
+- **Sequence Diagram:** Latifa reported that the Sequence Diagram is progressing well.
+
+### Obstacles Faced
+- **Blocker:** The team is currently waiting for feedback and approval from Miss Syeda on the Component Diagram before finalizing it.
+
+### Action Items
+- [ ] Hashem: Move the Sprint 2 issues to the new Kanban board.
+- [ ] Reem: Apply improvements to the Component Diagram and await Miss Syeda's approval.
+- [ ] Latifa: Continue drafting the Sequence Diagram.
+
+---
+
