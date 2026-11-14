@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accounts · TutorCircle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-nav="admin.html">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="content">
+      <h1 class="page-title">Accounts</h1>
+      <p class="page-sub">Create coordinator and admin accounts, and see everyone who uses TutorCircle.</p>
+      <div id="alert"></div>
+      <div class="grid-main">
+        <section class="card">
+          <div class="card-head">
+            <h2>All users (<span id="user-count">0</span>)</h2>
+            <select id="role-filter" style="width:auto">
+              <option value="all">All roles</option>
+              <option value="learner">Learners</option>
+              <option value="tutor">Tutors</option>
+              <option value="coordinator">Coordinators</option>
+              <option value="admin">Admins</option>
+            </select>
+          </div>
+          <div class="table-wrap" id="users"></div>
+        </section>
+
+        <div class="stack">
+          <form class="card" id="create-form" novalidate>
+            <h2 class="mb-16">Create an account</h2>
+            <div class="field"><label for="c-name">Full name</label><input type="text" id="c-name" placeholder="Full name"></div>
+            <div class="field"><label for="c-email">University email</label><input type="email" id="c-email" placeholder="name@aubh.edu.bh"></div>
+            <div class="field"><label for="c-password">Temporary password</label><input type="text" id="c-password" placeholder="At least 6 characters"></div>
+            <div class="field">
+              <label for="c-role">Role</label>
+              <select id="c-role">
+                <option value="coordinator">Coordinator</option>
+                <option value="admin">Admin</option>
+                <option value="tutor">Tutor</option>
+                <option value="learner">Learner</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-block">Create account</button>
+          </form>
+          <section class="card">
+            <h2 class="mb-16">Demo data</h2>
+            <p class="muted mb-16">Delete every change and restore the sample data.</p>
+            <button class="btn btn-danger btn-block" id="reset-btn">Reset demo data</button>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/profiles.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/sessions.js"></script>
+  <script src="js/workspace.js"></script>
+  <script src="js/learning.js"></script>
+  <script src="js/quality.js"></script>
+  <script src="js/insights.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/admin.js"></script>
+</body>
+</html>

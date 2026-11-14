@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My profile · TutorCircle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-nav="my-profile.html">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="content">
+      <div class="page-head">
+        <div>
+          <h1 class="page-title">My tutor profile</h1>
+          <p class="page-sub">Coordinators review your subjects before you can teach them.</p>
+        </div>
+        <a class="btn btn-outline" id="public-link" href="tutor-profile.html">View public profile</a>
+      </div>
+      <div id="status"></div>
+      <div id="alert"></div>
+
+      <form id="profile-form" class="grid-main" novalidate>
+        <div class="stack">
+          <section class="card">
+            <h2 class="mb-16">About you</h2>
+            <div class="grid-2">
+              <div class="field">
+                <label for="programme">Programme</label>
+                <input type="text" id="programme" placeholder="e.g. Computer Science" maxlength="60">
+              </div>
+              <div class="field">
+                <label for="year">Year</label>
+                <select id="year">
+                  <option value="1">Year 1</option><option value="2">Year 2</option>
+                  <option value="3">Year 3</option><option value="4">Year 4</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <span class="label">Formats you offer</span>
+              <div class="row">
+                <label class="check"><input type="checkbox" name="formats" value="group"> Group</label>
+                <label class="check"><input type="checkbox" name="formats" value="individual"> 1-to-1</label>
+                <label class="check"><input type="checkbox" name="formats" value="in-person"> In person</label>
+                <label class="check"><input type="checkbox" name="formats" value="online"> Online</label>
+              </div>
+            </div>
+            <div class="field" style="margin-bottom:0">
+              <label for="experience">Experience</label>
+              <textarea id="experience" placeholder="Grades, TA work, previous tutoring..." maxlength="1000"></textarea>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <h2>Subjects and topic tags</h2>
+              <button type="button" class="btn btn-outline btn-sm" id="add-subject">+ Add subject</button>
+            </div>
+            <p class="hint mb-16">Separate topic tags with commas, e.g. UML diagrams, Use cases</p>
+            <div class="stack-sm" id="subjects"></div>
+          </section>
+        </div>
+
+        <div class="stack">
+          <section class="card">
+            <h2 class="mb-16">Weekly availability</h2>
+            <p class="hint mb-16">Click the times you are free.</p>
+            <div class="avail" id="avail"></div>
+            <div class="legend"><span class="on">Available</span><span>Not available</span></div>
+          </section>
+          <button type="submit" class="btn btn-block" id="save-btn">Save and send for approval</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/profiles.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/sessions.js"></script>
+  <script src="js/workspace.js"></script>
+  <script src="js/learning.js"></script>
+  <script src="js/quality.js"></script>
+  <script src="js/insights.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/my-profile.js"></script>
+</body>
+</html>

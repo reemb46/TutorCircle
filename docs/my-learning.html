@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My learning · TutorCircle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-nav="my-learning.html">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="content">
+      <h1 class="page-title">My learning</h1>
+      <p class="page-sub">Your practice work, tutor comments and past sessions.</p>
+      <div id="alert"></div>
+
+      <div class="grid-main mb-16">
+        <!-- Practice work (FR-12) -->
+        <section class="card">
+          <p class="eyebrow">Practice work</p>
+          <h2 class="mb-16">Submit practice for a session</h2>
+          <form id="practice-form" novalidate>
+            <div class="grid-2">
+              <div class="field">
+                <label for="practice-session">Session</label>
+                <select id="practice-session"></select>
+              </div>
+              <div class="field">
+                <label for="practice-title">Title</label>
+                <input type="text" id="practice-title" placeholder="e.g. Login sequence diagram" maxlength="80">
+              </div>
+            </div>
+            <label class="dropzone" id="dropzone">
+              <input type="file" id="practice-file" hidden>
+              <span id="drop-text">Drag a file here or <u>browse</u> (max 10 MB)</span>
+            </label>
+            <div class="row mt-16" style="justify-content:flex-end">
+              <button type="submit" class="btn">Submit practice</button>
+            </div>
+          </form>
+          <h2 class="mt-16 mb-16">My submissions</h2>
+          <div class="stack-sm" id="submissions"></div>
+        </section>
+
+        <!-- Feedback (FR-13, FR-15) -->
+        <section class="card">
+          <h2 class="mb-16">Feedback on your sessions</h2>
+          <div id="feedback-area"></div>
+        </section>
+      </div>
+
+      <!-- Session history (FR-13) -->
+      <section class="card mb-16">
+        <h2 class="mb-16">Session history</h2>
+        <div class="table-wrap" id="history"></div>
+      </section>
+
+      <!-- Complaints (FR-16) -->
+      <section class="card" id="complaint-card">
+        <h2 class="mb-16">Report a problem</h2>
+        <form id="complaint-form" class="mb-16" novalidate>
+          <div class="grid-2">
+            <div class="field">
+              <label for="complaint-session">Session</label>
+              <select id="complaint-session"></select>
+            </div>
+            <div class="field">
+              <label for="complaint-text">What happened?</label>
+              <textarea id="complaint-text" placeholder="Describe the problem (at least 10 characters)" maxlength="1000"></textarea>
+            </div>
+          </div>
+          <div class="row" style="justify-content:flex-end"><button type="submit" class="btn btn-outline">Send to coordinator</button></div>
+        </form>
+        <h2 class="mb-16">My complaints</h2>
+        <div id="complaints"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/profiles.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/sessions.js"></script>
+  <script src="js/workspace.js"></script>
+  <script src="js/learning.js"></script>
+  <script src="js/quality.js"></script>
+  <script src="js/insights.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/my-learning.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in · TutorCircle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="auth">
+    <!-- Left panel -->
+    <section class="auth-side">
+      <div class="brand">
+        <span class="brand-logo">TC</span>
+        <span class="brand-name">TutorCircle</span>
+      </div>
+      <div class="auth-hero">
+        <svg viewBox="0 0 360 200" aria-hidden="true">
+          <rect x="20" y="40" width="320" height="140" rx="6" fill="#1C3A66"/>
+          <rect x="44" y="64" width="150" height="10" rx="5" fill="#3B82D6"/>
+          <rect x="44" y="86" width="110" height="8" rx="4" fill="#52607A"/>
+          <rect x="44" y="104" width="130" height="8" rx="4" fill="#52607A"/>
+          <rect x="44" y="136" width="90" height="24" rx="6" fill="#3B82D6"/>
+          <circle cx="250" cy="96" r="26" fill="#E1ECF9"/>
+          <circle cx="292" cy="118" r="20" fill="#3B82D6"/>
+          <circle cx="226" cy="140" r="16" fill="#D5DEEB"/>
+          <circle cx="300" cy="40" r="12" fill="#3B82D6"/>
+          <circle cx="40" cy="30" r="8" fill="#E1ECF9"/>
+        </svg>
+        <h1>Find a peer tutor, join a session, keep learning.</h1>
+        <p>Book group or 1-to-1 sessions with approved peer tutors at your university.</p>
+      </div>
+      <div class="auth-foot">American University of Bahrain · Peer tutoring</div>
+    </section>
+
+    <!-- Right panel -->
+    <main class="auth-main">
+      <div class="card auth-card">
+        <div class="tabs">
+          <button class="tab" data-tab="login">Log in</button>
+          <button class="tab" data-tab="signup">Sign up</button>
+        </div>
+
+        <div id="alert"></div>
+
+        <!-- Log in form -->
+        <form id="login-form" novalidate>
+          <h2 class="mb-16">Welcome back</h2>
+          <div class="field">
+            <label for="login-email">University email</label>
+            <input type="email" id="login-email" placeholder="name@aubh.edu.bh" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password">
+          </div>
+          <button type="submit" class="btn btn-block">Log in</button>
+
+          <div class="mt-16">
+            <p class="label">Demo accounts (password: password123)</p>
+            <div class="demo-list">
+              <button type="button" class="demo-btn" data-email="learner@aubh.edu.bh"><span>Maryam Hasan</span><span class="badge">Learner</span></button>
+              <button type="button" class="demo-btn" data-email="tutor@aubh.edu.bh"><span>Ali Mansoor</span><span class="badge">Tutor</span></button>
+              <button type="button" class="demo-btn" data-email="coordinator@aubh.edu.bh"><span>Sara Khalil</span><span class="badge">Coordinator</span></button>
+              <button type="button" class="demo-btn" data-email="admin@aubh.edu.bh"><span>Faisal Rashid</span><span class="badge">Admin</span></button>
+            </div>
+            <p class="hint">Something looks wrong? <a href="#" id="reset-link">Reset demo data</a></p>
+          </div>
+        </form>
+
+        <!-- Sign up form -->
+        <form id="signup-form" novalidate hidden>
+          <h2 class="mb-16">Create your account</h2>
+          <div class="field">
+            <label for="su-name">Full name</label>
+            <input type="text" id="su-name" placeholder="Your name" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="su-email">University email</label>
+            <input type="email" id="su-email" placeholder="name@aubh.edu.bh" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="su-password">Password</label>
+            <input type="password" id="su-password" placeholder="At least 6 characters" autocomplete="new-password">
+          </div>
+          <div class="field">
+            <span class="label">I want to join as</span>
+            <div class="options" id="role-options">
+              <button type="button" class="option selected" data-role="learner"><span class="dot"></span>Learner</button>
+              <button type="button" class="option" data-role="tutor"><span class="dot"></span>Peer tutor</button>
+            </div>
+            <p class="hint">Peer tutors need coordinator approval before they can create sessions. Coordinator and admin accounts are created by an admin.</p>
+          </div>
+          <button type="submit" class="btn btn-block">Create account</button>
+          <p class="hint" style="text-align:center">Already have an account? <a href="#" data-goto="login">Log in</a></p>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/profiles.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/sessions.js"></script>
+  <script src="js/workspace.js"></script>
+  <script src="js/learning.js"></script>
+  <script src="js/quality.js"></script>
+  <script src="js/insights.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/login.js"></script>
+</body>
+</html>

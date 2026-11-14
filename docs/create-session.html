@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create session · TutorCircle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-nav="create-session.html">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="content">
+      <h1 class="page-title" id="form-title">Create a session</h1>
+      <p class="page-sub">Only topics you're approved for are shown.</p>
+      <div id="alert"></div>
+
+      <div class="grid-main">
+        <form class="card" id="session-form" novalidate>
+          <div class="field">
+            <label for="title">Session title</label>
+            <input type="text" id="title" placeholder="e.g. UML sequence diagrams: practice" maxlength="80">
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="subject">Subject</label>
+              <select id="subject"></select>
+            </div>
+            <div class="field">
+              <span class="label">Topics</span>
+              <div class="chips" id="topics"></div>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="label">Session type</span>
+            <div class="options" id="type-options">
+              <button type="button" class="option" data-value="individual"><span class="dot"></span>Individual (1-to-1)</button>
+              <button type="button" class="option selected" data-value="group"><span class="dot"></span>Group</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="label">Learning objectives</span>
+            <div class="stack-sm" id="objectives"></div>
+            <button type="button" class="btn btn-outline btn-sm mt-16" id="add-objective">+ Add objective</button>
+          </div>
+
+          <div class="grid-4">
+            <div class="field">
+              <label for="date">Date</label>
+              <input type="date" id="date">
+            </div>
+            <div class="field">
+              <label for="time">Start time</label>
+              <select id="time"></select>
+            </div>
+            <div class="field">
+              <label for="duration">Duration</label>
+              <select id="duration">
+                <option value="30">30 min</option>
+                <option value="45">45 min</option>
+                <option value="60" selected>60 min</option>
+                <option value="90">90 min</option>
+                <option value="120">120 min</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="capacity">Capacity (learners)</label>
+              <input type="number" id="capacity" min="1" max="50" value="6">
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="label">Location</span>
+            <div class="options mb-16" id="format-options">
+              <button type="button" class="option selected" data-value="in-person"><span class="dot"></span>In person</button>
+              <button type="button" class="option" data-value="online"><span class="dot"></span>Online (meeting link)</button>
+            </div>
+            <input type="text" id="location" placeholder="e.g. Room S-204">
+          </div>
+
+          <div class="field">
+            <label for="prep">Preparation notes for learners (optional)</label>
+            <textarea id="prep" placeholder="What should learners read or bring?"></textarea>
+          </div>
+
+          <div class="row" style="justify-content:flex-end">
+            <button type="button" class="btn btn-outline" id="save-draft">Save draft</button>
+            <button type="submit" class="btn" id="publish">Publish session</button>
+          </div>
+        </form>
+
+        <aside class="card">
+          <p class="eyebrow">Preview: how learners will see it</p>
+          <div id="preview" class="mt-16"></div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/profiles.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/sessions.js"></script>
+  <script src="js/workspace.js"></script>
+  <script src="js/learning.js"></script>
+  <script src="js/quality.js"></script>
+  <script src="js/insights.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/create-session.js"></script>
+</body>
+</html>

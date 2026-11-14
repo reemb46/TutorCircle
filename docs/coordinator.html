@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coordinator dashboard · TutorCircle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-nav="coordinator.html">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="content">
+      <h1 class="page-title">Coordinator dashboard</h1>
+      <p class="page-sub">Tutor applications, missed sessions, complaints and demand.</p>
+      <div class="grid-4 mb-16" id="stats"></div>
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-tab="applications">Applications</button>
+        <button class="tab" data-tab="missed">Missed sessions</button>
+        <button class="tab" data-tab="complaints">Complaints</button>
+        <button class="tab" data-tab="demand">Demand insights</button>
+        <button class="tab" data-tab="log">Decision log</button>
+      </div>
+      <div id="alert"></div>
+      <div id="panel"></div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/profiles.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/sessions.js"></script>
+  <script src="js/workspace.js"></script>
+  <script src="js/learning.js"></script>
+  <script src="js/quality.js"></script>
+  <script src="js/insights.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/coordinator.js"></script>
+</body>
+</html>

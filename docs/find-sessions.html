@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find sessions · TutorCircle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-nav="find-sessions.html">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="content">
+      <h1 class="page-title">Find a session</h1>
+      <p class="page-sub">Search by subject or the topic you need help with.</p>
+
+      <form id="search-form" class="row mb-16">
+        <input type="text" id="q" placeholder="Search a subject or topic, e.g. UML sequence diagrams" style="flex:1;min-width:220px">
+        <button type="submit" class="btn">Search</button>
+      </form>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="sessions">Sessions (<span id="count-sessions">0</span>)</button>
+        <button class="tab" data-tab="tutors">Tutors (<span id="count-tutors">0</span>)</button>
+      </div>
+
+      <div class="grid-search">
+        <!-- Filters -->
+        <aside class="card">
+          <h2 class="mb-16">Filters</h2>
+
+          <div class="field">
+            <label for="f-subject">Subject</label>
+            <select id="f-subject"><option value="">All subjects</option></select>
+          </div>
+
+          <div class="field">
+            <span class="label">Topic</span>
+            <div class="chips" id="topic-chips"></div>
+          </div>
+
+          <div class="field">
+            <span class="label">Format</span>
+            <label class="check"><input type="checkbox" name="format" value="in-person" checked> In person</label>
+            <label class="check"><input type="checkbox" name="format" value="online" checked> Online</label>
+          </div>
+
+          <div class="field">
+            <label for="f-day">Available time</label>
+            <select id="f-day">
+              <option value="any">Any day</option>
+              <option value="today">Today</option>
+              <option value="tomorrow">Tomorrow</option>
+              <option value="week">Next 7 days</option>
+              <option value="weekend">This weekend (Fri–Sat)</option>
+            </select>
+            <select id="f-part" style="margin-top:8px">
+              <option value="any">Any time of day</option>
+              <option value="morning">Morning (8 AM–12 PM)</option>
+              <option value="afternoon">Afternoon (12–5 PM)</option>
+              <option value="evening">Evening (5–9 PM)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="f-size">Group size</label>
+            <select id="f-size">
+              <option value="any">Any size</option>
+              <option value="individual">1-to-1 only</option>
+              <option value="group">Group sessions</option>
+              <option value="small">Group, up to 6 learners</option>
+              <option value="large">Group, 7+ learners</option>
+            </select>
+          </div>
+
+          <button type="button" class="btn btn-outline btn-block" id="clear-filters">Clear filters</button>
+        </aside>
+
+        <!-- Results -->
+        <section>
+          <div class="row-between mb-16">
+            <span class="muted small" id="match-text"></span>
+            <select id="sort" style="width:auto">
+              <option value="soonest">Sort: Soonest</option>
+              <option value="places">Sort: Most places left</option>
+            </select>
+          </div>
+          <div id="tutor-filter-note"></div>
+          <div class="stack-sm" id="results"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/profiles.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/sessions.js"></script>
+  <script src="js/workspace.js"></script>
+  <script src="js/learning.js"></script>
+  <script src="js/quality.js"></script>
+  <script src="js/insights.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/find-sessions.js"></script>
+</body>
+</html>
