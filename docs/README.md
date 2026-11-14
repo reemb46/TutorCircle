@@ -67,11 +67,6 @@ Every function that changes data calls `requireRole()` first (FR-02).
 - **NFR-13** – one file per module (auth, profiles, search, sessions, workspace, learning, quality, insights).
 - **NFR-14** – open `tests.html` to run the automated tests on the booking logic.
 
-## Run it locally
-
-Open the folder in VS Code, install the **Live Server** extension,
-right-click `index.html` → **Open with Live Server**.
-
 ## Known limits of this phase
 
 - No server yet: data lives in each browser's localStorage.
