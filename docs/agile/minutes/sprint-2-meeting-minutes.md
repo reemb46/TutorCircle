@@ -1,15 +1,15 @@
 ## Quick Log Summary
 | Meeting | Date | One-Liner Summary |
 | :--- | :--- | :--- |
-| Stand-up 1 | [1/22/2026] | Team reviewed Assignment 2 requirements and assigned all design and architecture tasks. |
-| Stand-up 2 | [3/11/2026] | Component and sequence diagrams in progress, architecture research complete, burndown chart started. |
+| Stand-up 1 | 1/11/2026 | Team reviewed Assignment 2 requirements and assigned all design and architecture tasks. |
+| Stand-up 2 | 3/11/2026 | Component and sequence diagrams in progress, architecture research complete, burndown chart started. |
 | Stand-up 3 | 5/11/2026 | Discussed Ethical Statement rubric definitions, selected diagram tools, and voted on wireframe designs. |
-| Stand-up 4 | [8/11/2026] | Sequence and component diagrams draft reviews. migrating tasks to new Kanban board. |
-| Stand-up 5 | 10/11/2026 | Discussed tying ethics to app features, mapped external services, and began final PDF compilation. |
-| Stand-up 6 | 12/11/2026 | Discussed Lad submission functionality/search bar requirements, debated adding a chatbot, and started Sprint 2 retrospective. |
+| Stand-up 4 | 8/11/2026 | Sequence and component diagrams draft reviews. migrating tasks to new Kanban board. |
+| Stand-up 5 | 10/11/2026 | Discussed tying ethics to app features, mapped external services, lab submission requirements, and began final PDF compilation. |
+| Stand-up 6 | 12/11/2026 | Team aligned on ethical design statement decisions regarding fairness, privacy, and automated reminders. |
+| Stand-up 7 | 15/11/2026 | Reviewed final sequence and component diagrams, finalized website for lab submission, and discussed submission formatting. |
+
 ---
-
-
 
 # Sprint 2 - Meeting Minutes
 
@@ -52,6 +52,7 @@ Transition to Sprint 2, assign the new Scrum Master role, review requirements fo
 - [ ] Noor: Review rubric for Ethical Design Statement.
 
 ---
+
 ## Stand-up (2)
 
 **Date:** 3/11/2026
@@ -76,6 +77,7 @@ Transition to Sprint 2, assign the new Scrum Master role, review requirements fo
 <img width="1242" height="1391" alt="image" src="https://github.com/user-attachments/assets/026ef356-15de-48e3-8900-e3c746b52ae3" />
 
 ---
+
 ## Stand-up (3)
 
 **Date:** 5/11/2026
@@ -133,6 +135,11 @@ Transition to Sprint 2, assign the new Scrum Master role, review requirements fo
 - **Final Compilation:** Decided that Hashem will start compiling all the work into the final PDF.
 - **Sequence Diagram:** Discussed whether to include the database in the sequence diagram, or just the user and the system.
 - **Consistency:** Discussed aligning the terminology used between the architecture report and the design diagrams.
+- **Lab Submission Requirements:** Discussed the requirements for the upcoming lab submission, specifically focusing on functionality and the search bar.
+- **Coding & Formatting:** Established that functionality will be worked on by all development members, while Reem will handle the formatting.
+- **Chatbot Feature:** The team debated whether to add a chatbot.
+- **Diagram Consistency:** Discussed ensuring diagram designs are consistent and compliment each other.
+- **Retrospective Prep:** Hashem started gathering information to draft the Sprint 2 retrospective and created the corresponding issue on GitHub.
 
 ### Obstacles Faced
 - No blockers reported during this stand-up.
@@ -142,6 +149,10 @@ Transition to Sprint 2, assign the new Scrum Master role, review requirements fo
 - [ ] Hashem: Begin compiling all the work into the final PDF.
 - [ ] Latifa: Decide whether to include the database in the Sequence Diagram.
 - [ ] Haya & Mariam: Align terminology in the architecture report with the design diagrams.
+- [ ] Noor: Finalize the list of required website content.
+- [ ] All Dev Members: Begin working on website functionality.
+- [ ] Reem: Handle the website formatting.
+- [ ] Hashem: Draft the Sprint 2 retrospective.
 
 ---
 
@@ -153,20 +164,38 @@ Transition to Sprint 2, assign the new Scrum Master role, review requirements fo
 **Meeting Type:** Stand-up
 
 ### Discussion
-- **Lab Submission Requirements:** Discussed the requirements for the upcoming lab submission, specifically focusing on functionality and the search bar.
-- **Coding & Formatting:** Established that functionality will be worked on by all development members, while Reem will handle the formatting.
-- **Chatbot Feature:** The team debated whether to add a chatbot.
-- **Diagram Consistency:** Discussed ensuring diagram designs are consistent and compliment each other.
-- **Retrospective Prep:** Hashem started gathering information to draft the Sprint 2 retrospective and created the corresponding issue on GitHub.
+- **Ethical Design Statement:** The team finalized the core ethical decisions and trade-offs for the TutorCircle platform.
+- **Latifa:** Latifa suggested automated reminders to alert users before sessions to help them organize their schedules and make the platform more reliable.
+- **Hashem:** Hashem suggested a simple, transparent filtering system instead of a hidden popularity algorithm. The trade-off was personalization versus fairness—choosing fairness so new tutors aren't buried at the bottom.
+- **Reem & Haya:** Reem and Haya suggested role-based access control so that private information like complaints and feedback are only visible to authorized users (e.g., coordinators).
+- **Mariam:** Mariam suggested showing an average star rating on tutor profiles. The team rejected it because it would unfairly push new tutors down, which aligned with the team's fairness value.
 
 ### Obstacles Faced
 - No blockers reported during this stand-up.
 
 ### Action Items
-- [ ] Noor: Finalize the list of required website content.
-- [ ] All Dev Members: Begin working on website functionality.
-- [ ] Hashem: Draft the Sprint 2 retrospective.
+- [ ] Noor: Incorporate these finalized ethical decisions and trade-offs into the Ethical Design Statement.
 
 ---
 
+## Stand-up (7)
 
+**Date:** 15/11/2026
+**Duration:** 15 mins
+**Attendees:** Hashem Alzayer (Scrum Master), Haya Albinali, Noor Alawadhi, Mariam Abdulmalek, Latifa Qadheeb, Reem Bucheery
+**Meeting Type:** Stand-up
+
+### Discussion
+- **Submission Formatting:** Discussed the formatting requirements for the final submission.
+- **Sequence Diagram:** Reviewed the final Sequence Diagram by Latifa. The team liked it.
+- **Component Diagram:** Reviewed the final Component Diagram. The team liked it.
+- **Website Review:** Reviewed the website created for the lab submission. The team agreed it was perfect.
+
+### Obstacles Faced
+- No blockers reported during this stand-up.
+
+### Action Items
+- [ ] All Members: Prepare for the final submission based on the reviewed work.
+<img width="1242" height="1409" alt="IMG_2563" src="https://github.com/user-attachments/assets/f8f7d360-9529-43ee-b90f-92fc4c6cbdb4" />
+
+---
