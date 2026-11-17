@@ -8,7 +8,7 @@
 | Stand-up 5 | 10/11/2026 | Discussed tying ethics to app features, mapped external services, lab submission requirements, and began final PDF compilation. |
 | Stand-up 6 | 12/11/2026 | Team aligned on ethical design statement decisions regarding fairness, privacy, and automated reminders. |
 | Stand-up 7 | 15/11/2026 | Reviewed final sequence and component diagrams, finalized website for lab submission, and discussed submission formatting. |
-
+| Stand-up 8 | 17/11/2026 | Final review of PDF and GitHub, discussed retrospective, and confirmed all deliverables are complete. |
 ---
 
 # Sprint 2 - Meeting Minutes
@@ -197,5 +197,25 @@ Transition to Sprint 2, assign the new Scrum Master role, review requirements fo
 ### Action Items
 - [ ] All Members: Prepare for the final submission based on the reviewed work.
 <img width="1242" height="1409" alt="IMG_2563" src="https://github.com/user-attachments/assets/f8f7d360-9529-43ee-b90f-92fc4c6cbdb4" />
+
+---
+
+## Stand-up (8) - Final Review
+
+**Date:** 17/11/2026
+**Duration:** 15 mins
+**Attendees:** Hashem Alzayer (Scrum Master), Haya Albinali, Noor Alawadhi, Mariam Abdulmalek, Latifa Qadheeb, Reem Bucheery
+**Meeting Type:** Sprint Review & Final Stand-up
+
+### Discussion
+- **Final Review:** The team reviewed the final compiled PDF and the GitHub repository to ensure all Assignment 2 requirements were met.
+- **Retrospective Prep:** Discussed the Sprint 2 retrospective. Hashem gathered feedback from the team to formulate the final summary.
+- **Completion Status:** Confirmed that all tasks (Architecture Report, Diagrams, Ethical Statement, and Lab Website) are complete and ready for submission.
+
+### Obstacles Faced
+- No blockers reported. All sprint goals were successfully met.
+
+### Action Items
+- [ ] Hashem: Finalize the Sprint 2 Retrospective and submit the final PDF.
 
 ---
