@@ -9,6 +9,7 @@
 | Stand-up 6 | 12/11/2026 | Team aligned on ethical design statement decisions regarding fairness, privacy, and automated reminders. |
 | Stand-up 7 | 15/11/2026 | Reviewed final sequence and component diagrams, finalized website for lab submission, and discussed submission formatting. |
 | Stand-up 8 | 17/11/2026 | Final review of PDF and GitHub, discussed retrospective, and confirmed all deliverables are complete. |
+
 ---
 
 # Sprint 2 - Meeting Minutes
@@ -17,7 +18,7 @@ This document contains the official log of all stand-up meetings, sprint plannin
 
 ---
 
-## Stand-up 1 - Sprint Kickoff
+## Stand-up 1 - Sprint planning
 
 **Date:** 1/11/2026
 **Duration:** 30 mins
@@ -63,7 +64,7 @@ Transition to Sprint 2, assign the new Scrum Master role, review requirements fo
 ### Discussion
 - **Component Diagram:** Reem completed the first draft of the Component Diagram.
 - **Sequence Diagram:** Latifa has started drafting the Sequence Diagram.
-- **Architecture Analysis:** Mariam has completed research on the Layered architecture and decided to draft that section. Haya has completed research on Microservices and will draft that section.
+- **Architecture Analysis:** Haya has completed research on the Layered architecture and decided to draft that section. Mariam has completed research on Microservices and will draft that section.
 - **Burndown Chart:** Hashem (Scrum Master) began setting up the Burndown chart
 
 ### Obstacles Faced
@@ -165,9 +166,9 @@ Transition to Sprint 2, assign the new Scrum Master role, review requirements fo
 
 ### Discussion
 - **Ethical Design Statement:** The team finalized the core ethical decisions and trade-offs for the TutorCircle platform.
-- **Latifa:** Latifa suggested automated reminders to alert users before sessions to help them organize their schedules and make the platform more reliable.
+- **Latifa:** Latifa focused on the safety aspect, suggesting that repeated no-shows should be recorded and tracked in reports for the coordinator to take action on, ensuring platform reliability.
 - **Hashem:** Hashem suggested a simple, transparent filtering system instead of a hidden popularity algorithm. The trade-off was personalization versus fairness—choosing fairness so new tutors aren't buried at the bottom.
-- **Reem & Haya:** Reem and Haya suggested role-based access control so that private information like complaints and feedback are only visible to authorized users (e.g., coordinators).
+- **Reem & Haya:** Reem suggested a first-come, first-served booking system to ensure fairness, while Haya suggested role-based access control so that private information like complaints and feedback are only visible to authorized users (e.g., coordinators).
 - **Mariam:** Mariam suggested showing an average star rating on tutor profiles. The team rejected it because it would unfairly push new tutors down, which aligned with the team's fairness value.
 
 ### Obstacles Faced
